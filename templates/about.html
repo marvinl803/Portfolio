@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+    <main class="main main--about">
+
+            <img
+                class="hero"
+                src="{{ url_for('static', filename="img/about-picture.jpg") }}"
+            />
+
+        <p>
+            Hello! My name is Marvin Lopez, and I am a recent graduate with a Bachelor's degree in Computer Science.
+            At 22 years old, I am passionate about leveraging my skills and knowledge to create innovative solutions
+            in the world of technology. I graduated from Queens College with a degree in Computer Science.
+            Throughout my academic journey, I gained a solid foundation in various programming languages such as
+            Python, Java, CSS, HTML, and SQL. These languages have allowed me to build robust and efficient
+            software applications while continually expanding my technical expertise.
+            Apart from my dedication to computer science, I have a keen interest in soccer, both as a player and a fan.
+            The values of teamwork, discipline, and perseverance that I have cultivated through soccer align perfectly
+            with the collaborative nature of software development. I believe that these qualities contribute to my
+            ability to work effectively within a team to achieve shared goals.
+        </p>
+    </main>
+{% endblock %}
