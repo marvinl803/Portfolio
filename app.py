@@ -1,7 +1,4 @@
 from flask import Flask, render_template, abort
-import os
-
-app = Flask(__name__)
 
 projects = [
     {
@@ -40,24 +37,31 @@ projects = [
 
 slug_to_project = {project["slug"]: project for project in projects}
 
-@app.route("/")
-def home():
-    return render_template("home.html", projects=projects)
 
-@app.route("/about")
-def about():
-    return render_template("about.html")
+def create_app():
+    app = Flask(__name__)
 
-@app.route("/contact")
-def contact():
-    return render_template("contact.html")
+    @app.route("/")
+    def home():
+        return render_template("home.html", projects=projects)
 
-@app.route("/project/<string:slug>")
-def project(slug):
-    if slug not in slug_to_project:
-        abort(404)
-    return render_template(f"project_{slug}.html", project=slug_to_project[slug])
+    @app.route("/about")
+    def about():
+        return render_template("about.html")
+
+    @app.route("/contact")
+    def contact():
+        return render_template("contact.html")
+
+    @app.route("/project/<string:slug>")
+    def project(slug):
+        if slug not in slug_to_project:
+            abort(404)
+        return render_template(f"project_{slug}.html", project=slug_to_project[slug])
+
+    return app
+
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))
-    app.run(debug=True, port=port)
+    app = create_app()
+    app.run(debug=True)
