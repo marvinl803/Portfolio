@@ -7,7 +7,7 @@ projects = [
         "hero": "img/real-madrid.jpg",
         "categories": ["python", "web"],
         "slug": "real-madrid-zone",
-        "prod": "https://www.realmadridzone.online/",
+        "prod": "http://realmadridzone.online/",
     },
     {
         "name": "Habit Tracking App",
@@ -15,7 +15,7 @@ projects = [
         "hero": "img/habit-tracking.jpg",
         "categories": ["python", "web"],
         "slug": "habit-tracking",
-        "prod": "https://habit-tracker-fmnl.onrender.com/",
+        "prod": "https://web-habit-trackerr-0a51bd346c2f.herokuapp.com/",
     },
     {
         "name": "Microblogging App",
@@ -23,7 +23,7 @@ projects = [
         "hero": "img/microblogging.jpg",
         "categories": ["Python", "Web"],
         "slug": "microblog",
-        "prod": "https://web-microblog-8rdj.onrender.com/",
+        "prod": "https://python-microblog-9aa73165a8db.herokuapp.com/",
     },
     {
         "name": "Personal Portfolio App",
@@ -31,7 +31,7 @@ projects = [
         "hero": "img/portfolio.png",
         "categories": ["Python", "Web"],
         "slug": "portfolio",
-        "prod": "https://web-microblog-8rdj.onrender.com/",
+        "prod": "http://marvinportfolio.online/",
     },
 ]
 
